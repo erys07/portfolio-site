@@ -57,7 +57,7 @@ export function Hero() {
               alt="Erys Dev"
               fill
               className="object-cover"
-              style={{ objectPosition: "center 4  0%" }}
+              style={{ objectPosition: "center 40%" }}
               priority
             />
           </div>
