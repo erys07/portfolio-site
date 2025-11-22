@@ -1,33 +1,33 @@
-  import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  import { Badge } from "@/components/ui/badge"
-  import { Calendar, MapPin, ExternalLink } from "lucide-react"
+"use client"
 
-  const talks = [
-    {
-      title: "Clean Architecture na prática: por que separar responsabilidades importa",
-      event: "DevFest Agreste 2025",
-      date: "29/Nov",
-      location: "Centro de Convenções de Arapiraca/AL",
-      summary:
-        "Aprenda a aplicar o conceito de Clean Architecture na prática, separando responsabilidades e construindo uma aplicação escalável e fácil de manter.",
-      link: "https://gdg.community.dev/gdg-arapiraca/",
-      tags: ["Java", "Spring Boot", "Clean Architecture"],
-    },
-  ]
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Calendar, MapPin, ExternalLink } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/context"
 
-  export function Talks() {
-    return (
-      <section id="talks" className="bg-muted/30 py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Palestras Recentes</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              Amo compartilhar conhecimento em conferências e meetups. Aqui estão algumas das minhas palestras recentes.
-            </p>
-          </div>
+const talkLinks = {
+  "Clean Architecture na prática: por que separar responsabilidades importa": "https://gdg.community.dev/gdg-arapiraca/",
+  "Clean Architecture in practice: why separating responsibilities matters": "https://gdg.community.dev/gdg-arapiraca/",
+}
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {talks.map((talk) => (
+export function Talks() {
+  const { t } = useLanguage()
+  const talks = t.talks.items
+
+  return (
+    <section id="talks" className="bg-muted/30 py-20 md:py-32">
+      <div className="container mx-auto px-4">
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">{t.talks.title}</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+            {t.talks.description}
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {talks.map((talk) => {
+            const link = talkLinks[talk.title as keyof typeof talkLinks] || "#"
+            return (
               <Card key={talk.title} className="group hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <CardTitle className="text-2xl group-hover:text-primary transition-colors text-balance">
@@ -55,17 +55,18 @@
                     ))}
                   </div>
                   <a
-                    href={talk.link}
+                    href={link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Ver Detalhes do Evento
+                    {t.talks.eventDetails}
                   </a>
                 </CardContent>
               </Card>
-            ))}
+            )
+          })}
           </div>
         </div>
       </section>

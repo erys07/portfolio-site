@@ -1,18 +1,17 @@
 "use client";
 
-import type React from "react";
-
-import { useState } from "react";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Mail } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
 
 export function Newsletter() {
+  const { t } = useLanguage()
+
   return (
     <section id="newsletter" className="container mx-auto px-4 pt-8 md:pt-12 pb-20 md:pb-32">
       <div className="max-w-2xl mx-auto">
@@ -22,10 +21,10 @@ export function Newsletter() {
               <Mail className="w-6 h-6 text-primary" />
             </div>
             <CardTitle className="text-3xl md:text-4xl text-balance">
-              Inscreva-se no Newsletter
+              {t.newsletter.title}
             </CardTitle>
             <CardDescription className="text-base leading-relaxed">
-              Receba semanalmente insights sobre desenvolvimento, dicas de carreira e recursos selecionados entregues diretamente na sua caixa de entrada. Sem spam, desinscreva-se a qualquer momento.
+              {t.newsletter.description}
             </CardDescription>
           </CardHeader>
           <iframe

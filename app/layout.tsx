@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { LanguageProvider } from "@/lib/i18n/context"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -35,10 +36,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body className={`font-sans antialiased`}>
-        {children}
-        <Analytics />
+        <LanguageProvider>
+          {children}
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   )

@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tag, ExternalLink } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/context"
 
 const coupons = [
   {
@@ -25,6 +26,8 @@ const coupons = [
 ]
 
 export function PartnerCoupons() {
+  const { t } = useLanguage()
+
   const copyToClipboard = (code: string) => {
     navigator.clipboard.writeText(code)
   }
@@ -37,10 +40,10 @@ export function PartnerCoupons() {
             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
               <Tag className="w-5 h-5 text-primary" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-balance">Ofertas de Parceiros</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-balance">{t.partnerCoupons.title}</h2>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            Descontos exclusivos e ofertas de meus parceiros confiáveis. Economize em ferramentas e serviços que eu pessoalmente uso e recomendo.
+            {t.partnerCoupons.description}
           </p>
         </div>
 
@@ -70,11 +73,11 @@ export function PartnerCoupons() {
               <CardContent className="space-y-4">
                 <div className="bg-muted rounded-lg p-4 flex items-center justify-between">
                   <div>
-                    <p className="text-xs text-muted-foreground mb-1">Código do Cupom</p>
+                    <p className="text-xs text-muted-foreground mb-1">{t.partnerCoupons.couponCode}</p>
                     <code className="text-lg font-mono font-bold">{coupon.code}</code>
                   </div>
                   <Button variant="outline" size="sm" onClick={() => copyToClipboard(coupon.code)}>
-                    Copiar
+                    {t.partnerCoupons.copy}
                   </Button>
                 </div>
                 <div className="flex items-center justify-between text-sm">
@@ -84,7 +87,7 @@ export function PartnerCoupons() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-primary hover:underline"
                   >
-                    <span>Visitar Site</span>
+                    <span>{t.partnerCoupons.visitSite}</span>
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
