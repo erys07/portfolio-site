@@ -430,6 +430,36 @@ function Badge({ className, variant, asChild = false, ...props }) {
 }
 ;
 }),
+"[project]/lib/text-processor.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "processDescription",
+    ()=>processDescription
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
+;
+function processDescription(description) {
+    const parts = description.split(/(@\w+(?:\.\w+)?)/g);
+    return parts.map((part, index)=>{
+        if (part.startsWith('@')) {
+            const username = part.slice(1);
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                href: `https://instagram.com/${username}`,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "text-primary hover:underline font-medium",
+                children: part
+            }, index, false, {
+                fileName: "[project]/lib/text-processor.tsx",
+                lineNumber: 10,
+                columnNumber: 9
+            }, this);
+        }
+        return part;
+    });
+}
+}),
 "[project]/components/projects.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -442,6 +472,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/badge.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/external-link.js [app-rsc] (ecmascript) <export default as ExternalLink>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$github$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Github$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/github.js [app-rsc] (ecmascript) <export default as Github>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$text$2d$processor$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/text-processor.tsx [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -461,7 +493,7 @@ const projects = [
     {
         title: "Hackaween",
         description: "Hackathon que promovi, junto com a @grazi.tech e a @mictalks, reunindo desenvolvedores para criar soluções inovadoras em tecnologia.",
-        link: "#",
+        link: "https://discord.gg/5Xsptg3U",
         tags: [
             "Evento",
             "Hackathon",
@@ -469,28 +501,6 @@ const projects = [
         ]
     }
 ];
-// Função para processar mentions do Instagram
-function processDescription(description) {
-    const parts = description.split(/(@\w+(?:\.\w+)?)/g);
-    return parts.map((part, index)=>{
-        if (part.startsWith('@')) {
-            const username = part.slice(1) // Remove o @
-            ;
-            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                href: `https://instagram.com/${username}`,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                className: "text-primary hover:underline font-medium",
-                children: part
-            }, index, false, {
-                fileName: "[project]/components/projects.tsx",
-                lineNumber: 30,
-                columnNumber: 9
-            }, this);
-        }
-        return part;
-    });
-}
 function Projects() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "projects",
@@ -504,7 +514,7 @@ function Projects() {
                         children: "Projetos em Destaque"
                     }, void 0, false, {
                         fileName: "[project]/components/projects.tsx",
-                        lineNumber: 49,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -512,13 +522,13 @@ function Projects() {
                         children: "Projetos que desenvolvi durante minha jornada de aprendizado, explorando diferentes tecnologias e construindo soluções práticas."
                     }, void 0, false, {
                         fileName: "[project]/components/projects.tsx",
-                        lineNumber: 50,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/projects.tsx",
-                lineNumber: 48,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -535,26 +545,26 @@ function Projects() {
                                             children: project.title
                                         }, void 0, false, {
                                             fileName: "[project]/components/projects.tsx",
-                                            lineNumber: 60,
+                                            lineNumber: 37,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/projects.tsx",
-                                        lineNumber: 59,
+                                        lineNumber: 36,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardDescription"], {
                                         className: "text-base leading-relaxed",
-                                        children: processDescription(project.description)
+                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$text$2d$processor$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["processDescription"])(project.description)
                                     }, void 0, false, {
                                         fileName: "[project]/components/projects.tsx",
-                                        lineNumber: 62,
+                                        lineNumber: 39,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/projects.tsx",
-                                lineNumber: 58,
+                                lineNumber: 35,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -566,12 +576,12 @@ function Projects() {
                                                 children: tag
                                             }, tag, false, {
                                                 fileName: "[project]/components/projects.tsx",
-                                                lineNumber: 69,
+                                                lineNumber: 46,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/projects.tsx",
-                                        lineNumber: 67,
+                                        lineNumber: 44,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -587,14 +597,14 @@ function Projects() {
                                                         className: "w-4 h-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/projects.tsx",
-                                                        lineNumber: 82,
+                                                        lineNumber: 59,
                                                         columnNumber: 21
                                                     }, this),
                                                     "Ver Código"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/projects.tsx",
-                                                lineNumber: 76,
+                                                lineNumber: 53,
                                                 columnNumber: 19
                                             }, this),
                                             project.link && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -607,43 +617,43 @@ function Projects() {
                                                         className: "w-4 h-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/projects.tsx",
-                                                        lineNumber: 93,
+                                                        lineNumber: 70,
                                                         columnNumber: 21
                                                     }, this),
                                                     "Ver Mais"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/projects.tsx",
-                                                lineNumber: 87,
+                                                lineNumber: 64,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/projects.tsx",
-                                        lineNumber: 74,
+                                        lineNumber: 51,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/projects.tsx",
-                                lineNumber: 66,
+                                lineNumber: 43,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, project.title, true, {
                         fileName: "[project]/components/projects.tsx",
-                        lineNumber: 57,
+                        lineNumber: 34,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/projects.tsx",
-                lineNumber: 55,
+                lineNumber: 32,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/projects.tsx",
-        lineNumber: 47,
+        lineNumber: 24,
         columnNumber: 5
     }, this);
 }
@@ -1121,4 +1131,4 @@ __turbopack_context__.n(__turbopack_context__.i("[project]/app/page.tsx [app-rsc
 }),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__01ccd37d._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__2405009c._.js.map
