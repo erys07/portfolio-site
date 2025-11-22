@@ -10,23 +10,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Mail, CheckCircle2 } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export function Newsletter() {
-  const [email, setEmail] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implement newsletter subscription logic
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
-
   return (
-    <section id="newsletter" className="container mx-auto px-4 py-20 md:py-32">
+    <section id="newsletter" className="container mx-auto px-4 pt-8 md:pt-12 pb-20 md:pb-32">
       <div className="max-w-2xl mx-auto">
         <Card className="border-2">
           <CardHeader className="text-center">
