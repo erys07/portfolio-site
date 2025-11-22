@@ -1,7 +1,7 @@
 export const pt = {
   hero: {
     title: "Erys Dev",
-    subtitle: "Desenvolvedor, Palestrante e Criador de Conteúdo",
+    subtitle: "Desenvolvedor e Criador de Conteúdo",
     description:
       "Construo aplicações modernas e sou criador de conteúdo, compartilhando conhecimento por meio de palestras, artigos e tutoriais. Uso minha experiência como desenvolvedor para criar soluções de alto impacto e ajudar outros profissionais a evoluírem em suas carreiras.",
     viewProjects: "Ver Projetos",

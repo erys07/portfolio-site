@@ -1,7 +1,7 @@
 export const en = {
   hero: {
     title: "Erys Dev",
-    subtitle: "Developer, Speaker and Content Creator",
+    subtitle: "Developer and Content Creator",
     description:
       "I build modern applications and create content, sharing knowledge through talks, articles and tutorials. I use my experience as a developer to create high-impact solutions and help other professionals evolve in their careers.",
     viewProjects: "View Projects",
