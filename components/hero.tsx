@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail } from "lucide-react"
+import Image from "next/image"
 
 export function Hero() {
   return (
     <section className="container mx-auto px-4 py-20 md:py-32">
-      <div className="max-w-3xl">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-balance">Erys Dev</h1>
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl">
+        <div>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-balance">Erys Dev</h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
           Desenvolvedor, Palestrante e Criador de Conteúdo
         </p>
@@ -46,6 +48,19 @@ export function Hero() {
           >
             <Mail className="w-6 h-6" />
           </a>
+        </div>
+        </div>
+        <div className="hidden md:block relative w-full aspect-square max-w-lg lg:max-w-xl mx-auto">
+          <div className="relative w-full h-full rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl">
+            <Image
+              src="/v2_7cb62f4a-94b6-440d-9655-9359672ba2ad.jpg"
+              alt="Erys Dev"
+              fill
+              className="object-cover"
+              style={{ objectPosition: "center 4  0%" }}
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
