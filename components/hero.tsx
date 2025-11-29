@@ -5,6 +5,7 @@ import { Github, Linkedin, Mail } from "lucide-react"
 import Image from "next/image"
 import { useLanguage } from "@/lib/i18n/context"
 import { LanguageSelector } from "@/components/language-selector"
+import { processDescription } from "@/lib/text-processor"
 
 export function Hero() {
   const { t } = useLanguage()
@@ -19,7 +20,7 @@ export function Hero() {
           {t.hero.subtitle}
         </p>
         <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-2xl">
-        {t.hero.description}
+        {processDescription(t.hero.description)}
         </p>
         <div className="flex flex-wrap gap-4 items-center">
           <Button asChild size="lg">

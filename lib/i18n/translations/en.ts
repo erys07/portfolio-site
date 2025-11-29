@@ -3,7 +3,7 @@ export const en = {
     title: "Erys Dev",
     subtitle: "Developer and Content Creator",
     description:
-      "I build modern applications and create content, sharing knowledge through talks, articles and tutorials. I use my experience as a developer to create high-impact solutions and help other professionals evolve in their careers.",
+      "Developer at [CI&T](https://ciandt.com). I build modern applications and create content, sharing knowledge through talks, articles and tutorials. I use my experience as a developer to create high-impact solutions and help other professionals evolve in their careers.",
     viewProjects: "View Projects",
     subscribeNewsletter: "Subscribe to Newsletter",
   },
