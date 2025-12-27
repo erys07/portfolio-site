@@ -15,6 +15,11 @@ export const en = {
     viewMore: "View More",
     items: [
       {
+        title: "Kafka Go Scalable Worker",
+        description: "Scalable Kafka worker in Go designed to process 1 million messages per minute (~16.667 msg/s), using clean architecture patterns and concurrency optimizations.",
+        tags: ["Go", "Kafka", "Concurrency"],
+      },
+      {
         title: "Wishlist API",
         description: "API for managing product wishlists built with Java 25 and Spring Boot.",
         tags: ["Java", "Spring Boot", "MongoDB"],

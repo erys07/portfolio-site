@@ -7,6 +7,9 @@ import { processDescription } from "@/lib/text-processor"
 import { useLanguage } from "@/lib/i18n/context"
 
 const projectLinks = {
+  "Kafka Go Scalable Worker": {
+    github: "https://github.com/erys07/kafka-go-scalable-worker",
+  },
   "Wishlist API": {
     github: "https://github.com/erys07/wishlist",
   },
