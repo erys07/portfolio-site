@@ -32,13 +32,14 @@ export function processDescription(description: string): (string | React.ReactEl
         const linkMatchResult = matchedText.match(/\[([^\]]+)\]\(([^)]+)\)/)
         if (linkMatchResult) {
           const [, text, url] = linkMatchResult
+          const isPluxee = text === "Pluxee"
           parts.push(
             <a
               key={key++}
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
+              className={isPluxee ? "text-green-600 hover:text-green-700 hover:underline font-medium" : "text-primary hover:underline font-medium"}
             >
               {text}
             </a>

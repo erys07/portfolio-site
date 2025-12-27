@@ -3,7 +3,7 @@ export const pt = {
     title: "Erys Dev",
     subtitle: "Desenvolvedor e Criador de Conteúdo",
     description:
-      "Desenvolvedor na [CI&T](https://ciandt.com). Construo aplicações modernas e sou criador de conteúdo, compartilhando conhecimento por meio de palestras, artigos e tutoriais. Uso minha experiência como desenvolvedor para criar soluções de alto impacto e ajudar outros profissionais a evoluírem em suas carreiras.",
+      "Desenvolvedor na [Pluxee](https://pluxee.com.br). Construo aplicações modernas e sou criador de conteúdo, compartilhando conhecimento por meio de palestras, artigos e tutoriais. Uso minha experiência como desenvolvedor para criar soluções de alto impacto e ajudar outros profissionais a evoluírem em suas carreiras.",
     viewProjects: "Ver Projetos",
     subscribeNewsletter: "Inscreva-se no Newsletter",
   },
